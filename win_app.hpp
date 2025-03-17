@@ -1,6 +1,7 @@
-#pragma once;
+#pragma once
 
 #include "tk_window.hpp"
+#include "tk_pipeline.hpp"
 
 namespace Toolkid {
 	class WinApp
@@ -11,6 +12,7 @@ namespace Toolkid {
 
 		void run();
 	private:
-		TkWindow tkWindow{ WIDTH, HEIGHT, "TK Window" };		
+		TkWindow tkWindow{ WIDTH, HEIGHT, "TK Window" };
+		TkPipeline tkPipeline{ "shader/test_shader.vert.spv", "shader/test_shader.frag.spv" };
 	};
 }
